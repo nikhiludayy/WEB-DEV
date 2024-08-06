@@ -12,13 +12,13 @@ html,body{
 /* width */
 ::-webkit-scrollbar {
 
-    width: 1px;
+    width: 1.3px;
     height: 5px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    display: none;
+    display: inline-block;
     
   }
    
@@ -29,7 +29,7 @@ html,body{
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: none; 
+    background: rebeccapurple; 
   }
 
 
@@ -49,8 +49,8 @@ html,body{
     z-index: 1;
     padding: 5px;
     background-color: rgb(136, 167, 168);
-    width: 250px;
-    height: 70%;
+    width: 350px;
+    height: 90vh;
     /* display: flex; */
     /* overflow: hidden; */
     /* flex-direction: column; */
@@ -62,22 +62,22 @@ html,body{
 .story{
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    padding: 2px;
+    gap: 6px;
+    padding: 4px;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 80px;
+    width: 100px;
+    height: 100%;
     /* background-color: aqua; */
 }
 .story .imgg{
     cursor: pointer;
-    width: 60px;
-    height: 100%;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: white 2px solid;
     overflow: hidden;
-    /* background-color: rgb(83, 179, 10); */
+    background-color: rgb(83, 179, 10);
 }
 .story img{
     width: 100%;
@@ -87,15 +87,18 @@ html,body{
 .story h5{
     cursor: not-allowed;
     color: white;
-    font-family: poppins;
+    font-family: montserrat;
     letter-spacing: 1px;
     font-size: 15px;
+    font-variant: small-caps;
 }
 
 #card #storyboard{
     display: flex;
+    flex-wrap: nowrap;
    margin-top: 5px;
     padding: 10px;
+    gap: 10px;
     align-items: center;
     background-color: rgb(27, 113, 116);
     width:100%;
@@ -135,7 +138,6 @@ html,body{
 }
 
 #card #fullscrn{
-    
     display: none;
     margin: -5px;
     position: absolute;
