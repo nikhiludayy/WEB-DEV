@@ -1,0 +1,237 @@
+* {
+    hyphens: auto;
+    user-select: none;
+    font-family: montserrat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: violet;
+}
+
+#mtext {
+
+    position: absolute;
+    padding: 5px;
+    width: auto;
+    top: 40%;
+    left: 40%;
+    color: white;
+
+
+    z-index: 9999;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rgba(240, 248, 255, 0.356);
+
+
+}
+
+#mt {
+    padding: 5px;
+    width: auto;
+    background-color: rgba(153, 205, 50, 0.808);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+#mt h1 {
+    white-space: nowrap;
+    font-size: 70px;
+}
+
+#mt h3 {
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+#left {
+    width: 45%;
+    height: 100%;
+    background-color: rgb(10, 118, 150);
+}
+
+#right {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    background: url(https://images.unsplash.com/photo-1710973894356-e884a2d7c2b0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20%;
+}
+
+#right #card {
+    position: absolute;
+    display: flex;
+    width: 30%;
+    height: 20%;
+    bottom: 10%;
+    right: -10%;
+    z-index: 9999;
+    background-color: yellow;
+}
+
+#card #cicon {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: wheat;
+}
+
+#card #cphoto {
+    width: 80%;
+    height: 100%;
+    background: url(https://images.unsplash.com/photo-1693198860440-9ad9dcda1906?q=80&w=1838&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: 80% 80%;
+}
+
+
+
+#imgdiv {
+    position: relative;
+    top: 8%;
+    left: 25%;
+    width: 50%;
+    height: 60%;
+    background: url(https://images.unsplash.com/photo-1722230290258-38a1a0e3ec56?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+
+}
+
+#imgdiv #text1 {
+    display: flex;
+    position: absolute;
+    padding: 10px;
+    bottom: -25%;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.38);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#text1 #parts {
+    width: 30%;
+}
+
+#parts h5 {
+    margin-bottom: 20px;
+}
+
+#text1 #para {
+
+    width: 70%;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 10px;
+
+}
+
+#para p {
+    margin-bottom: 10px;
+
+}
+
+#nav {
+
+    width: 100%;
+    display: flex;
+    align-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 10px 20px;
+
+}
+
+#nav a {
+    padding-left: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+
+}
+
+#nav h3 {
+    padding-left: 20px;
+    color: white;
+    font-size: 15px;
+
+}
+
+#scroll {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: -20%;
+    left: 2%;
+    transform-origin: 0% 50%;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+}
+
+#scroll #line {
+    width: 150px;
+    height: 2px;
+    background-color: white;
+
+}
+
+#scroll h4 {
+    color: aliceblue;
+    letter-spacing: 10px;
+    font-weight: 700;
+}
+
+#rright {
+    position: relative;
+    width: 10%;
+    height: 100%;
+    background-color: rgb(128, 185, 14);
+}
+
+#rright i {
+    position: absolute;
+    top: 2%;
+    right: 20%;
+    color: white;
+}
+
+#rright #slinks {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    top: 50%;
+    right: -95px;
+    %;
+    transform-origin: center;
+    transform: rotate(90deg);
+}
+
+#rright #slinks a {
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+}

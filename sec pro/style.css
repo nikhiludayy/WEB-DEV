@@ -1,0 +1,258 @@
+* {
+    hyphens: auto;
+    /* user-select: none; */
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    
+}
+
+#nav {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(244, 149, 102, 0.986);
+    color: white;
+    padding: 0vw 4vw;
+    z-index: 9999;
+    
+}
+#nav i{
+    display: none;
+}
+#nav h2{
+    font-size: 2vw;
+}
+
+#nav .place {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    width: max-content;
+}
+
+.place a:nth-child(1) {
+    position: relative;
+
+}
+
+.place a:nth-child(1)::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0%;
+    height: .2vw;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+/* .place #nline {
+    position: absolute;
+    right: 30%;
+    bottom: -6%;
+    width: 12%;
+    height: 9%;
+    background-color: white;
+} */
+
+.place a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3vw;
+
+}
+
+#content{
+    width: 100%;
+    height: calc(100%);
+    display: flex;
+    background: url(https://images.unsplash.com/photo-1542668331-3c6b8b55e472?q=80&w=1793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    
+}
+
+#left { 
+    position: relative;
+    display: flex;
+    gap: 6vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+#left .pplace {
+    font-size: 1vw;
+    padding: 0vw 4vw;
+    color: white;
+    width: 100%;
+}
+
+.pplace h4 {
+    
+    opacity: .7;
+    display: inline-block;
+    border-bottom: solid white;
+}
+
+.pplace:nth-child(3) h4 {
+    opacity: 1;
+    white-space: nowrap;
+    font-size: 4vw;
+}
+
+.pplace:nth-child(3) h6 {
+    font-size: 1vw;
+}
+
+#main h5 {
+    position: absolute;
+    bottom: 12%;
+    font-size: .8vw;
+    letter-spacing: 0.5vw;
+    left: -4%;
+    transform: rotate(-90deg);
+    color: rgb(255, 255, 255);
+}
+
+#right {
+    overflow: hidden;
+    padding: 0vw 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+    width: 70%;
+    background-color: rgba(200, 205, 50, 0);
+
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(150, 255, 3);
+    width: fit-content;
+
+}
+
+#text h1 {
+    padding: 10px;
+    width: 150%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.37);
+    font-size: 7vw;
+}
+
+#text h3 {
+    font-size: 1.4vw;
+    padding: 0px 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.37);
+    text-align: center;
+}
+
+#intext {
+    margin-top: 40px;
+    display: flex;
+    gap: 1vw;
+    
+}
+
+#intext input {
+    width: 90%;
+    color: white;
+    background: transparent;
+    font-size: 1.5vw;
+    border: none;
+    border-bottom: solid white .2vw;
+    outline: none;
+}
+
+#intext input::placeholder {
+    color: white;
+}
+
+#main small {
+   
+    font-size: 1vw;
+    color: chartreuse;
+    z-index: 9999;
+}
+
+footer{
+    display: flex;
+    padding-right: 1vw;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(55, 55, 55);
+}
+
+@media (max-width:414px) {
+    #content{
+        flex-direction: column;
+    }
+    #nav{
+        background-color: crimson;
+    }
+    #nav h2{
+        font-size: 5vw;
+        font-weight: 900;
+    }
+
+    #nav i{
+        font-size: 3vh;
+        display:block ;
+    }
+
+    #nav .place{
+        display: none;
+    }
+
+    
+    #left .pplace {
+        font-size: 1vh;
+        padding: 1vh 2vh;
+        
+    }
+    
+    .pplace h4 {
+        
+        opacity: .7;
+        display: inline-block;
+        border-bottom: solid white;
+    }
+    
+    .pplace:nth-child(3) h4 {
+        opacity: 1;
+        white-space: nowrap;
+        font-size: 2.5vh;
+    }
+    
+    .pplace:nth-child(3) h6 {
+        font-size: 1.3vh;
+        white-space: nowrap;
+    }
+    
+}
