@@ -39,9 +39,24 @@ document.querySelector("#storyboard").addEventListener("click",function(details)
     fullscr.style.display="block";
     opcc.style.display="block";
   
+    fullscr.addEventListener("click",function(){
+        fullscr.style.backgroundImage=`url(${data[(details.target.id)++].story})`;
+            // fullscr.style.display="none";
+            // opcc.style.display="none";
+            })
+        
     
+    
+    setTimeout(function(){
+                fullscr.style.display="none";
+                opcc.style.display="none";},5000)
+            
+    var growth=0;
+    if(growth<100)
+    {setInterval(function(){
+        document.querySelector("#growth").style.width=`${growth++}%`}
+        ,50)}
+        else{
+            growth=0;
+        }
 })
-fullscr.addEventListener("click",function(){
-    fullscr.style.display="none";
-    opcc.style.display="none";}
-)
