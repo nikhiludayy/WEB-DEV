@@ -43,13 +43,21 @@ document.querySelector("#storyboard").addEventListener("click", function (detail
     var disid = (details.target.id);
     function print() {
         flag=0;
+        console.log("flag "+flag)
         fullscr.style.backgroundImage = `url(${data[disid].story})`;
         fullscr.style.display = "block";
         opcc.style.display = "block";
-        if(flag==0){stry();}
-        else{fullscr.style.display = "none";
-            opcc.style.display = "none";
-            disid = 0;}
+        stry();
+        var growth = 0;
+        if (growth < 100) {
+            setInterval(function () {
+                document.querySelector("#growth").style.width = `${growth++}%`
+            }
+                , 30)
+        }
+        else {
+            growth = 0;
+        }
     }
     print();
     
@@ -57,7 +65,10 @@ document.querySelector("#storyboard").addEventListener("click", function (detail
     {setTimeout(function () {
         fullscr.style.backgroundImage = `url(${data[disid].story})`;
         disid++;
-        print();
+        if(flag==0){print();}
+        else{fullscr.style.display = "none";
+            opcc.style.display = "none";
+            disid = 0;}
         // stry()
         console.log(disid);
         // fullscr.style.display="none";
@@ -67,22 +78,13 @@ document.querySelector("#storyboard").addEventListener("click", function (detail
     }, 3000)}
     
     
-    var growth = 0;
-    if (growth < 100) {
-        setInterval(function () {
-            document.querySelector("#growth").style.width = `${growth++}%`
-        }
-            , 30)
-    }
-    else {
-        growth = 0;
-    }
+   
 })
 fullscr.addEventListener("click", function () {
     // fullscr.style.backgroundImage=`url(${data[disid].story})`;
     // disid++;
     flag=1;
-    console.log("flag"+flag)
+    console.log("flag "+flag)
     fullscr.style.display = "none";
     opcc.style.display = "none";
     disid = 0;
