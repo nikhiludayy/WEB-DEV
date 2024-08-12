@@ -19,7 +19,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background-color: #222;
+    background-color: #d6d3d3;
 }
 
 #main {
@@ -27,6 +27,7 @@ body {
     height: 100%; */
     position: relative;
     background-color: #222;
+    overflow-x: hidden;
 }
 
 #main #nav {
@@ -34,11 +35,11 @@ body {
     width: 100vw;
     height: 12vh;
     /* margin-top: 10px; */
-    padding: 0px 100px;
+    padding: 0px 6vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 3vh;
+    font-size: 2vw;
     letter-spacing: 4px;
     position: absolute;
     z-index: 99;
@@ -76,7 +77,7 @@ body {
 
 #main #full-scr-nav {
     position: absolute;
-    top:-110vh;
+    top:-100vh;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -92,14 +93,14 @@ body {
 
 #main #full-scr-nav h2 {
     color: #222;
-    font-size: 20vh;
+    font-size: 10vw;
     transition: all ease 0.9s;
 }
 
 #main #full-scr-nav p {
     max-width: 70vw;
     color: #222;
-    font-size: 2.5vh;
+    font-size: 2vw;
     transition: all ease 0.9s;
 }
 
@@ -139,6 +140,7 @@ body {
 }
 
 #main #page2{
+    /* overflow: hidden; */
     /* background: #000; */
     width: 100vw;
     min-height: 100vh;
@@ -151,15 +153,22 @@ body {
     width: 100%;
 
 }
+#main #page2 #h11{
+    margin-top: 20vh;
+}
 #main #page2 h1{
-    /* position: relative;
-    left: 50%; */
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    /* transform: translate(-50%,0) scale(0.9); */
-    width: 90vw;
-    margin: auto;
-    font-size: 4.5vw;
+    width: 80vw;
+    font-size: 4vw;
 }
 #main #page2 h1 span{
     font-family: "dancingscript";
+}
+
+#main #page3{
+    width: 100vw;
+    min-height: 100vh;
+
 }
