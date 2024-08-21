@@ -27,7 +27,7 @@ function printt() {
         clutter += `<div class="story">
                     <div class="imgg" >
                         <img id="${index}" src="${val.dp}" alt=""></div>
-                    <h5>${val.name}</h5>
+                    <h5 id="${index}">${val.name}</h5>
                 </div>`
     })
     document.querySelector("#storyboard").innerHTML = clutter;
@@ -39,53 +39,68 @@ var fullscr = document.querySelector("#fullscrn")
 var opcc = document.querySelector("#opc")
 var disid;
 var flag;
+var growth;
 document.querySelector("#storyboard").addEventListener("click", function (details) {
-    var disid = (details.target.id);
+    disid = (details.target.id);
+    console.log(details.target.id);
     function print() {
-        flag=0;
-        console.log("flag "+flag)
+        flag = 0;
+        console.log("flag " + flag)
         fullscr.style.backgroundImage = `url(${data[disid].story})`;
         fullscr.style.display = "block";
         opcc.style.display = "block";
+        // document.querySelector("#growth").style.display="block";
         stry();
-        var growth = 0;
-        if (growth < 100) {
-            setInterval(function () {
-                document.querySelector("#growth").style.width = `${growth++}%`
+        // growth = 0;
+        let int = setInterval(function () {
+            if (growth === 100) {
+                clearInterval(int);
             }
-                , 30)
-        }
-        else {
-            growth = 0;
-        }
+            else {
+                growth++;
+                document.querySelector("#growth").style.width = growth + '%';
+            }
+        }, 30)
+
+        // else {
+        //     growth = 0;
+
+        // }
     }
     print();
-    
-    function stry()
-    {setTimeout(function () {
-        fullscr.style.backgroundImage = `url(${data[disid].story})`;
-        disid++;
-        if(flag==0){print();}
-        else{fullscr.style.display = "none";
-            opcc.style.display = "none";
-            disid = 0;}
-        // stry()
-        console.log(disid);
-        // fullscr.style.display="none";
-        // opcc.style.display="none";
-        // disid=0;
 
-    }, 3000)}
-    
-    
-   
+    function stry() {
+        setTimeout(function () {
+            fullscr.style.backgroundImage = `url(${data[disid].story})`;
+            disid++;
+            if (flag == 0) {
+                growth = 0;
+                print();
+            }
+            else {
+                fullscr.style.display = "none";
+                opcc.style.display = "none";
+                disid = 0;
+            }
+            // stry()
+            console.log(disid);
+            // fullscr.style.display="none";
+            // opcc.style.display="none";
+            // disid=0;
+
+        }, 3000)
+    }
+
+
+
 })
 fullscr.addEventListener("click", function () {
     // fullscr.style.backgroundImage=`url(${data[disid].story})`;
     // disid++;
-    flag=1;
-    console.log("flag "+flag)
+    flag = 1;
+    console.log("flag " + flag)
     fullscr.style.display = "none";
     opcc.style.display = "none";
+    // document.querySelector("#growth").style.display="none";
     disid = 0;
 })
