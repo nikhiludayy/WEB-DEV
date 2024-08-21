@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100;
+    height: 100;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 100px;
+}
+
+#six .text h3{
+    display: none;
+}
+
+#seven #prgbar{
+    margin-left: 30px;
+    width: 200px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #525151;
+}
+#seven #prgbar #prg{
+    width: 0%;
+    height: inherit;
+    border-radius: 10px;
+    background-color: #aefe01;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1),.2s;
+}
+
+#eight #search{
+    width: 100%;
+    padding: 1em 5em;
+}
+#eight #search input{
+    width: 100%;
+    padding: .5em 1em;
+    outline-color: #fed401;
+}
+#eight #results{
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+    padding: 1em 5em;
+    width: 100%;
+    height: inherit;
+    background-color: #7be222;
+}
+#eight #results .img{
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+
+}
+#eight #results .img .imgg{
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
+}
+#eight #results .img .imgg img{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    
+}
+
+#nine textarea{
+    margin: 0em 0em 0em 5em;
+    gap: 10px;
+    flex-shrink: 0;
+    width: 50%;
+    height: 100px;
+    outline-color: #7be222;
+    resize: none;
+}
+#nine h4{
+    margin: 0em 0em 0em 5em;
+
+}
+
+#progress-container {
+    position: fixed;
+   bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f3f3f3;
+    height: 8px;
+    z-index: 1000;
+}
+
+/* Progress Bar */
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+}
