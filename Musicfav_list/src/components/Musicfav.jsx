@@ -4,7 +4,7 @@ export default function Musicfav({values,index,handlefavClick}) {
     const {name,img,artist,added}=values;
     
   return (
-    <div className='bg-zinc-100 w-60 p-4 rounded-md mt-10 flex gap-4 pb-10 relative'>
+    <div className='bg-zinc-100 w-60 p-4 shadow-md rounded-md mt-10 flex gap-4 pb-10 relative'>
         <div className='w-20 h-20 bg-orange-600 rounded-md overflow-hidden'>
             <img className='w-full h-full object-cover' src={img} alt="" />
         </div>
