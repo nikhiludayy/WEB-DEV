@@ -16,8 +16,12 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/user" element={<User />} />
-          <Route path="/user/:usernames" element={<Userdetails />}></Route>
+          <Route path="/user" element={<User />}>
+          {/* for component on same page */}
+            <Route path="/user/:usernames" element={<Userdetails />}></Route>
+          </Route>
+          {/* for  componement in next page
+          <Route path="/user/:usernames" element={<Userdetails />}></Route> */}
 
           <Route path="/about" element={<About />}></Route>
         </Routes>
