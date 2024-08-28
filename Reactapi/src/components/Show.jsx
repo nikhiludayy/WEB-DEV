@@ -1,24 +1,31 @@
-import React,{ useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "../utils/axios";
 
 export const Show = () => {
   const [pro, getpro] = useState([]);
   useEffect(() => {
     console.log("Component created");
-    getproduct()
+    getproduct();
     return () => {
       console.log("Component destroyed");
     };
-    
-  },[]);
-
-  
+  }, []);
 
   const getproduct = () =>
     //request data from link or server
     {
       const api = "/products";
-
+      // const apii = "https://randomuser.me/api/";
+      // fetch(api)
+      //   .then((e) => {
+      //    return e.json()
+      //   })
+      //   .then((er) => {
+      //     console.log(er);
+      //   })
+      //   .catch((err) => {
+      //     console.log(err);
+      //   });
       axios
         .get(api)
         .then((e) => {
