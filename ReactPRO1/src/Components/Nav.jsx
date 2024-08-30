@@ -31,11 +31,11 @@ const Nav = () => {
           <div key={i} className=" w-[80%]">
             <Link
               to={`/?category=${c}`}
-              className="flex items-center gap-1 px-2"
+              className="hover:scale-125 transition-all flex items-center gap-1 px-2"
             >
               <span
                 style={{ backgroundColor: color() }}
-                className={` w-[12px] h-[12px] rounded-full inline-block`}
+                className={`hover:scale-125 transition-all w-[12px] h-[12px] rounded-full inline-block`}
               ></span>
               {c}
             </Link>
@@ -44,7 +44,7 @@ const Nav = () => {
       })}
       <Link
         to="/"
-        className="py-2 px-3 border text-sm rounded-md border-blue-300 text-blue-400"
+        className="hover:scale-125 transition-all py-2 px-3 border text-sm rounded-md border-blue-300 text-blue-400"
       >
         ClearALL
       </Link>

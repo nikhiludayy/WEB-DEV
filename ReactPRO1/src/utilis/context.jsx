@@ -5,17 +5,21 @@ import { createContext } from "react";
 import { useEffect } from "react";
 export const ProductContext = createContext();
 const context = (props) => {
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState((null))
 
   const getproducts = async () => {
     try {
       const { data } = await axios("/products");
-      setProducts(data);
+      setProducts(JSON.parse(localStorage.getItem("products"))||data);
+      localStorage.setItem('products', JSON.stringify(data));
     } catch (error) {
       console.error(error);
     }
   };
-  useEffect(()=>{getproducts()},[])
+  // console.log(products);
+  useEffect(() => {
+    getproducts();
+  }, []);
   return (
     <ProductContext.Provider value={[products, setProducts]}>
       {props.children}
