@@ -7,7 +7,10 @@ const Details = () => {
   const navigate = useNavigate();
   const handleRemove = () => {
     setProducts(products.filter((p) => p.id != id));
-    localStorage.setItem('products', JSON.stringify((products.filter((p) => p.id != id))));
+    localStorage.setItem(
+      "products",
+      JSON.stringify(products.filter((p) => p.id != id))
+    );
     return alert("Data has been Removed");
   };
   return (
@@ -57,7 +60,7 @@ const Details = () => {
                 <p className="text-xs font-semibold">{product.description}</p>
                 <div className="w-full h-7 mt-2 flex gap-4 text-sm font-semibold">
                   <Link
-                    to={"/"}
+                    to={`/edit/${id}`}
                     className="py-1 px-3  hover:scale-125 transition-all border rounded-md border-blue-300 text-blue-400"
                   >
                     Edit
