@@ -22,11 +22,11 @@ const Marquees = () => {
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d2754882567001f1ee80_spotify.svg",
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/661b2455cb60f1919ab48e20_Logo.svg",
       "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/65b2d275999da7719dc1fe2c_haufe.svg",
-    ]
+    ],
   ];
-  
+
   return (
-    <div  className="py-20 mt-42 w-full relative overflow-hidden">
+    <div className="py-20 mt-42 w-full relative overflow-hidden">
       {images.map((elem, index) => {
         return <Marquee val={elem} />;
       })}
