@@ -28,9 +28,9 @@ const Stripes = () => {
       number: 48,
     },
   ];
-  return <div className="flex">
+  return <div className="w-full mt-20 border-zinc-600 border-t-[1px]  border-b-[1px]  flex">
     {data.map((elem,index)=>{
-        return <Stripe val={elem}/>
+        return <Stripe key={index} index={index} val={elem}/>
     })}
   </div>;
 };

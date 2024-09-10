@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="w-full">
-      <div className="max-w-screen-xl mx-auto flex">
+      <div className="max-w-screen-xl px-5 mx-auto flex">
         <div className="basis-1/2  ">
           <h1 className="text-[12vw] font-medium tracking-tight ">refokus.</h1>
         </div>
@@ -22,8 +22,8 @@ const Footer = () => {
 
             })}</div>
           </div>
-          <div className="basis-1/3 flex flex-col items-end justify-center gap-4">
-          <p className="text-right text-white">
+          <div className="basis-1/2 flex flex-col items-end justify-center gap-4">
+          <p className="text-right text-base text-white">
               Refokus is a pioneering digital agency driven by design and
               empowered by technology.
             </p>
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto flex gap-5">
+      <div className="max-w-screen-xl mx-auto flex p-5 gap-5">
         {["Privacy Policy", "Cookie Policy", "Impressum", "Terms"].map(
           (item, index) => (
             <a

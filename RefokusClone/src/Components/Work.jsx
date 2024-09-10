@@ -1,7 +1,7 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 const Work = () => {
-  let images = [
+  let [images, setimages] = useState([
     {
       url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef09178195ce0073e38f3_Refokus%20Tools-1.png",
       top: "50%",
@@ -38,11 +38,44 @@ const Work = () => {
       left: "55%",
       isActive: false,
     },
-  ];
+  ]);
+  const { scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    let scrollval = Math.floor(latest * 100);
+
+    if (scrollval === 0) {
+      showHideImages([]);
+    } else if (scrollval === 1) {
+      showHideImages([0]);
+
+    } else if (scrollval === 2) {
+      showHideImages([0, 1]);
+    } else if (scrollval === 5) {
+      showHideImages([0, 1, 2]);
+    } else if (scrollval === 6) {
+      showHideImages([0, 1, 2, 3]);
+    } else if (scrollval === 7) {
+      showHideImages([0, 1, 2, 3, 4]);
+    } else if (scrollval === 8) {
+      showHideImages([0, 1, 2, 3, 4, 5]);
+    }
+  });
+
+  let showHideImages = (arr) => {
+    
+    setimages((prev) =>
+      prev.map((items, index) =>{
+       return arr.indexOf(index) === -1
+          ? { ...items, isActive: false }
+          : { ...items, isActive: true }
+      })
+    );
+  };
   return (
-    <div className="w-full mt-5 ">
+    <div className="w-full mt-20 ">
       <div className="relative max-w-screen-xl mx-auto text-center">
-        <h1 className="text-[5in] leading-none font-medium select-none  tracking-tight">
+        <h1 className="text-[35vw] leading-none font-medium select-none  tracking-tight">
           work
         </h1>
         <div className=" absolute top-0  w-full h-full ">
@@ -52,6 +85,7 @@ const Work = () => {
                 <img
                   className="w-60 rounded-lg absolute -translate-x-[50%] -translate-y-[50%] "
                   src={elem.url}
+                  key={index}
                   style={{ top: elem.top, left: elem.left }}
                 ></img>
               )

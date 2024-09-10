@@ -6,10 +6,11 @@ import Products from "./Components/Products";
 import Marquees from "./Components/Marquees";
 import Cards from "./Components/Cards";
 import Footer from "./Components/Footer";
-
+import LocomotiveScroll from 'locomotive-scroll';
 const App = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="w-full h-full px-5 font-['satoshi'] bg-zinc-900 text-white">
+    <div className="w-full h-full  font-['satoshi'] bg-zinc-900 text-white">
       <Navbar />
       <Work />
       <Stripes />
